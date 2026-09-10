@@ -1,12 +1,15 @@
 * {
     box-sizing: border-box;
 }
-html, body {
+
+html,
+body {
     margin: 0;
     width: 100%;
     height: 100%;
 
 }
+
 .calculator {
     width: 100vw;
     height: 100vh;
@@ -14,12 +17,27 @@ html, body {
     color: #2F3430;
     display: flex;
     flex-direction: column;
-    font-family:Verdana, Geneva, Tahoma, sans-serif;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
     font-size: large;
 }
 
 .output {
     flex: 1;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+
+}
+
+button.reset {
+    flex: 1;
+    height: 50px;
+    background-color: #a3b894;
+    border-color: #A8B89F;
+}
+
+.right-side {
+    flex: 6;
     display: flex;
     flex-direction: column;
     align-items: flex-end;
@@ -27,17 +45,17 @@ html, body {
     padding: 20px;
     font-size: 2rem;
 }
+
 .buttons {
+    
     flex: 3;
     display: flex;
     flex-direction: column;
-    gap: 15px;
 }
 
 .row {
     flex: 1;
     display: flex;
-    gap: 15px;
 
 }
 
@@ -47,9 +65,9 @@ html, body {
     color: #2F3430;
     border: 2px solid #F5F1E8;
     border-radius: 15px;
-    font-family:Verdana, Geneva, Tahoma, sans-serif;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
     font-size: large;
-    cursor:pointer;
+    cursor: pointer;
 }
 
 .btn:hover {
