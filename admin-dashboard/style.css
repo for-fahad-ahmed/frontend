@@ -106,7 +106,6 @@ input {
     grid-template-areas:
         "search profile"
         "hi-there buttons";
-
 }
 
 .search {
@@ -123,7 +122,7 @@ input {
 
 .search>input {
     flex: 1;
-    
+
     background-color: #F1F5F9;
     color: #0F172A;
 
@@ -224,7 +223,7 @@ input {
 }
 
 .buttons>button:hover {
-    background-color: #b0b0b0;
+    background-color: #3B82F6;
 
     transform: translateY(-3px) scale(1.05);
 
@@ -233,51 +232,50 @@ input {
 
 main {
     grid-area: main;
-    background-color: #F1F5F9;
+    background-color: #f2f1f9;
 
     display: grid;
     grid-template-columns: 3fr 1fr;
-    grid-template-rows: 5% 1fr;
+    grid-template-rows: auto 1fr;
     grid-template-areas:
-    "heading-1 heading-2"
-    "your-projects right-sidebar";
+        "heading-1 heading-2"
+        "your-projects right-sidebar";
     gap: 30px;
 
+    padding: 25px;
     overflow-y: auto;
 }
 
-main > p {
+main>h2 {
     font-size: 25px;
     font-weight: bold;
+    margin: 0;
 }
 
-main > p:first-child {
+main>h2:first-child {
     grid-area: heading-1;
-    margin: 25px;
 }
 
-main > p:nth-child(2) {
+main>h2:nth-child(2) {
     grid-area: heading-2;
 }
+
 .your-projects {
     grid-area: your-projects;
-    margin-left: 25px;
 
     display: grid;
     grid-template-columns: 1fr 1fr;
     gap: 25px;
-
 }
-
 
 .main-card {
     background-color: #FFFFFF;
     border-radius: 8px;
-    border-left: 8px solid #F5A623; 
+    border-left: 8px solid #F5A623;
     padding: 25px 20px;
 
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05), 0 1px 3px rgba(0, 0, 0, 0.1);
-    
+
     display: flex;
     flex-direction: column;
 }
@@ -295,12 +293,12 @@ main > p:nth-child(2) {
     font-size: 15px;
     line-height: 1.4;
 
-    flex-grow: 1; 
+    flex-grow: 1;
 }
 
 .main-card-actions {
     display: flex;
-    justify-content: flex-end; 
+    justify-content: flex-end;
     gap: 15px;
     margin-top: 20px;
 }
@@ -318,9 +316,89 @@ main > p:nth-child(2) {
 
 .right-sidebar {
     grid-area: right-sidebar;
-    background: purple;
 
-    margin-right: 25px;
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
 }
 
+.right-sidebar>div {
+    background-color: white;
+    border-radius: 8px;
+}
 
+.sidebar-card-1 {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+
+    padding: 25px 20px;
+}
+
+.sidebar-card-1-heading {
+    margin: 0;
+    margin-bottom: 5px;
+    font-size: 16px;
+    font-weight: bold;
+}
+
+.sidebar-card-1-desc {
+    margin: 0;
+    font-size: 14px;
+    line-height: 1.4;
+}
+
+.trending-heading {
+    margin: 0;
+    font-size: 25px;
+    font-weight: bold;
+}
+
+.sidebar-card-2 {
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    padding: 5px;
+}
+
+.sidebar-card-2-section {
+    display: grid;
+    grid-template-rows: 1fr 1fr;
+    grid-template-columns: 40px 1fr;
+    grid-template-areas:
+        "icon userid"
+        "icon username";
+    align-items: center;
+    column-gap: 20px;
+
+    padding: 5px;
+}
+
+.sidebar-card-2-section>img {
+    grid-area: icon;
+    margin: 0;
+
+    height: 40px;
+    width: 40px;
+
+    border-radius: 50%;
+    border: 2px dotted black;
+
+    object-fit: cover;
+}
+
+.sidebar-card-2-userid {
+    grid-area: userid;
+
+    margin: 0;
+
+    font-size: 14px;
+}
+
+.sidebar-card-2-username {
+    grid-area: username;
+    margin: 0;
+
+    font-size: 12px;
+    color: #0F172A;
+}
