@@ -1,0 +1,196 @@
+/* Base Resets */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+    background-color: #f3f4f6;
+    color: #1f2937;
+    line-height: 1.5;
+}
+
+/* Header */
+.header {
+    background-color: #ffffff;
+    padding: 1.5rem 5%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+}
+
+.header h1 {
+    font-size: 2rem;
+    color: #111827;
+}
+
+/* Buttons */
+button {
+    cursor: pointer;
+    border: none;
+    border-radius: 6px;
+    font-weight: 600;
+    padding: 0.5rem 1rem;
+    transition: background-color 0.2s ease;
+}
+
+.primary-btn, .submit-btn {
+    background-color: #2563eb;
+    color: white;
+    padding: 0.75rem 1.5rem;
+    font-size: 1rem;
+}
+
+.primary-btn:hover, .submit-btn:hover {
+    background-color: #1d4ed8;
+}
+
+.cancel-btn {
+    background-color: #e5e7eb;
+    color: #374151;
+    padding: 0.75rem 1.5rem;
+    font-size: 1rem;
+}
+
+.cancel-btn:hover {
+    background-color: #d1d5db;
+}
+
+/* Library Grid Container */
+.main-content {
+    padding: 2rem 5%;
+}
+
+.library-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 1.5rem;
+}
+
+/* Book Cards */
+.book-card {
+    background-color: #ffffff;
+    padding: 1.5rem;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    border-left: 5px solid #2563eb;
+}
+
+.book-title {
+    font-size: 1.25rem;
+    color: #111827;
+}
+
+.book-author {
+    font-size: 1rem;
+    color: #4b5563;
+    font-weight: normal;
+}
+
+.book-pages, .book-status {
+    color: #6b7280;
+    font-size: 0.95rem;
+}
+
+.button-group {
+    display: flex;
+    gap: 0.5rem;
+    margin-top: 1rem;
+}
+
+.toggle-read-btn {
+    flex: 1;
+    background-color: #10b981;
+    color: white;
+}
+
+.toggle-read-btn:hover {
+    background-color: #059669;
+}
+
+.remove-btn {
+    flex: 1;
+    background-color: #ef4444;
+    color: white;
+}
+
+.remove-btn:hover {
+    background-color: #dc2626;
+}
+
+.modal {
+    margin: auto;
+    padding: 2rem;
+    border: none;
+    border-radius: 12px;
+    box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+    max-width: 400px;
+    width: 90%;
+}
+
+.modal::backdrop {
+    background-color: rgba(0, 0, 0, 0.5);
+    backdrop-filter: blur(2px);
+}
+
+.book-form {
+    display: flex;
+    flex-direction: column;
+    gap: 1.25rem;
+}
+
+.book-form h2 {
+    margin-bottom: 0.5rem;
+    text-align: center;
+}
+
+.form-control {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+.form-control label {
+    font-weight: 600;
+    font-size: 0.9rem;
+}
+
+.form-control input[type="text"],
+.form-control input[type="number"] {
+    padding: 0.75rem;
+    border: 1px solid #d1d5db;
+    border-radius: 6px;
+    font-size: 1rem;
+}
+
+.form-control input:focus {
+    outline: none;
+    border-color: #2563eb;
+    box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.2);
+}
+
+.checkbox-control {
+    flex-direction: row;
+    align-items: center;
+}
+
+.checkbox-control input[type="checkbox"] {
+    width: 18px;
+    height: 18px;
+}
+
+.form-actions {
+    display: flex;
+    gap: 1rem;
+    margin-top: 1rem;
+}
+
+.form-actions button {
+    flex: 1;
+}
